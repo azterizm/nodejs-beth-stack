@@ -38,11 +38,11 @@ export function TodoList({ todos }: { todos: Todo[] }) {
 export function TodoForm() {
   return (
     <form
-      class='flex flex-row space-x-3'
+      class='flex flex-row space-x-3 mt-3'
       hx-post='/todo'
       hx-swap='beforebegin'
       x-data="{input: ''}"
-      x-on:submit="setTimeout(() => input='', 1)"
+      x-on:submit="setTimeout(()=>input='',1)"
     >
       <input
         type='text'

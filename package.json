@@ -19,7 +19,7 @@
     "start": "node build/index.js",
     "start:clean": "tsc;node build/index.js",
     "build": "tsc",
-    "dev": "concurrently \"ts-node-dev src/index.tsx --logError\" \"yarn tw:dev\"",
+    "dev": "concurrently \"tsc -w\" \"yarn tw:dev\" \"node --watch build/index.js\"",
     "tw": "yarn tailwindcss -i src/styles/global.css -o public/styles/global.css",
     "tw:dev": "yarn tailwindcss -i src/styles/global.css -o public/styles/global.css --watch"
   }
